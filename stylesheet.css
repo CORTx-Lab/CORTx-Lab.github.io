@@ -1,7 +1,7 @@
 /*@import url('fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');*/
 
 a {
-  color: #0099cc; /*#0099cc; */ /*#14A098;*/ /*#0099cc;*/
+  color: #0053D6; /*#0053D6; */ /*#14A098;*/ /*#0053D6;*/
   text-decoration: none;
 }
 
@@ -120,7 +120,7 @@ span.highlight {
 /* Style the header links */
 .header a {
   float: left;
-  /*color: #0099cc;*/
+  /*color: #0053D6;*/
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -144,7 +144,7 @@ span.highlight {
 /* Style the active/current link*/
 /*.header a.active {
   background-color: white;
-  color: #0099cc;
+  color: #0053D6;
 }*/
 
 /* Float the link section to the right */
@@ -160,7 +160,7 @@ a.button {
 
     text-decoration: none;
     border: none;
-    background-color: #0099cc;
+    background-color: #0053D6;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -187,7 +187,7 @@ a.button-paper {
 
     text-decoration: none;
     border: none;
-    background-color: #0099cc;
+    background-color: #0053D6;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -363,7 +363,7 @@ a.button-profile {
 button.button1{
   background-color:#FFFFFF;
   border:none;
-  color: #0099cc;
+  color: #0053D6;
   text-decoration:none;
   /*font-family:'Poppins',sans-serif;*/
   /*font-family: 'Open Sans', sans-serif;*/
@@ -375,7 +375,7 @@ button.button1{
 }
 button.button1:hover{
   color:#f18800;
-  /*background-color:#0099cc;  */
+  /*background-color:#0053D6;  */
   /*padding:0.2em 0.35em;*/
   margin: 0 0.3em 0.3em 0;
   border-radius:0.5em;
