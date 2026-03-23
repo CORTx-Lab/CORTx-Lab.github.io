@@ -1,13 +1,14 @@
 /*@import url('fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');*/
 
 a {
-  color: #0053D6;
+  color: #275317;
   text-decoration: none;
+  font-weight: 700;
 }
 
 a:focus,
 a:hover {
-  color: #66B2FF;
+  color: #275317;
   text-decoration: none;
 }
 
@@ -27,7 +28,7 @@ p {
   /*font-family: 'Lora', serif;*/
   font-size: 15px;
   line-height: 1.5;
-  color: #0F172A;
+  color: #0B3041;
 }
 
 strong {
@@ -123,7 +124,7 @@ span.highlight {
 
 .header a {
   float: left;
-  color: #000000;
+  color: #0B3041;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -141,13 +142,13 @@ span.highlight {
 /* Change the background color on mouse-over */
 .header a:hover {
   background-color: transparent;
-  color: #0053D6;
+  color: #275317;
 }
 
 /* Style the active/current link*/
 /*.header a.active {
   background-color: white;
-  color: #0053D6;
+  color: #275317;
 }*/
 
 /* Float the link section to the right */
@@ -163,7 +164,7 @@ a.button {
 
     text-decoration: none;
     border: none;
-    background-color: #0053D6;
+    background-color: #275317;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -190,7 +191,7 @@ a.button-paper {
 
     text-decoration: none;
     border: none;
-    background-color: #0053D6;
+    background-color: #275317;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -286,7 +287,7 @@ a.button-blog {
 
     text-decoration: none;
     border: none;
-    background-color: #66B2FF;
+    background-color: #275317;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -358,7 +359,7 @@ a.button-profile {
 button.button1{
   background-color:#FFFFFF;
   border:none;
-  color: #0053D6;
+  color: #275317;
   text-decoration:none;
   /*font-family:'Poppins',sans-serif;*/
   /*font-family: 'Open Sans', sans-serif;*/
@@ -369,7 +370,7 @@ button.button1{
   margin: 0 0.3em 0.3em 0;
 }
 button.button1:hover{
-  color:#66B2FF;
+  color:#275317;
   /*background-color:#0053D6;  */
   /*padding:0.2em 0.35em;*/
   margin: 0 0.3em 0.3em 0;
@@ -595,7 +596,7 @@ button.button1:hover{
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #0053D6;
+  color: #275317;
   margin: 0 0 8px 0;
 }
 
@@ -648,6 +649,8 @@ button.button1:hover{
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .hero-cover img {
