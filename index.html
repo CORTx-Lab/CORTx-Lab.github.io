@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Autonomous Control, Optimization and Robotics (CORTx)</title>
+
+  <meta name="author" content="Hassan Almubarak">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/squared.png">
+
+  <style>
+    .page-container {
+      width: 100%;
+      max-width: 900px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .content-block {
+      padding: 20px;
+    }
+
+    .home-media-grid {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 14px;
+      margin-top: 8px;
+      margin-bottom: 28px;
+    }
+
+    .home-media-row {
+      display: grid;
+      gap: 14px;
+    }
+
+    .home-media-row.top {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .home-media-row.bottom {
+      grid-template-columns: 1.6fr 1.5fr 1fr 1.4fr;
+    }
+
+    .home-media-tile {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid #d8d8d8;
+      background: #f7f7f7;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .home-media-tile.top-tile {
+      height: 220px;
+    }
+
+    .home-media-tile.bottom-tile {
+      height: 165px;
+    }
+
+    .home-media-tile img,
+    .home-media-tile video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .square-tile img,
+    .square-tile video {
+      object-fit: contain;
+      background: #f7f7f7;
+    }
+
+    .home-media-caption {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      background: rgba(11, 48, 65, 0.82);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 999px;
+      line-height: 1.2;
+    }
+
+    .news-section {
+      padding: 0 20px 20px 20px;
+    }
+
+    .news-list {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .news-toggle-wrap {
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+
+    .news-toggle-button {
+      background: none;
+      border: none;
+      color: black;
+      cursor: pointer;
+      font: inherit;
+      padding: 0;
+    }
+
+    .news-toggle-button i {
+      margin-right: 6px;
+    }
+
+    .bottom-spacer {
+      height: 40px;
+    }
+
+    @media screen and (max-width: 900px) {
+      .home-media-row.top,
+      .home-media-row.bottom {
+        grid-template-columns: 1fr;
+      }
+
+      .home-media-tile.top-tile,
+      .home-media-tile.bottom-tile {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <div class="header page-container" style="border:0;border-spacing:0;border-collapse:separate;padding-bottom:0;">
+    <a href="index.html" class="logo" style="color:black;font-size:18px; padding-top:30px">
+      <img src="images/blue_green_ver.png" height="120" data-keep-image="true" alt="CORTx logo">
+    </a>
+    <div class="header-right" style="padding-top:50px;">
+      <a href="index.html" style="font-size:23px; color:#0B3041">Home</a>
+      <a href="people.html" style="font-size:23px; color:#0B3041">People</a>
+      <a href="research.html" style="font-size:23px; color:#0B3041">Research</a>
+      <a href="publications.html" style="font-size:23px; color:#0B3041">Publications</a>
+      <a href="join.html" style="font-size:23px; color:#0B3041">Join</a>
+      <br>
+      <div class="header-right" style="padding-top:0;">
+        <a href="https://github.com/CORTx-Lab"><i class="fa fa-github" style="font-size:28px;color:#275317;"></i></a>
+        <!-- <a href="https://www.youtube.com/"><i class="fa fa-youtube" style="font-size:28px;color:#275317;"></i></a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="page-container">
+    <div class="content-block">
+      <p>
+        <b>Welcome to the Autonomous Control, Optimization, and Robotics (<strong><span class="cortx-wordmark">CORT<span class="cortx-x">x</span></span></strong>) Lab</b>
+        <em>(yes, pronounced “cortex” &#129504;!)</em> at <a href="https://www.kfupm.edu.sa/" target="_blank" rel="noopener noreferrer">KFUPM</a>.
+      </p>
+      <div class="home-media-grid">
+
+        <div class="home-media-row top">
+          <div class="home-media-tile top-tile">
+            <img src="images/research/dt_mpc_robotarium_x2.gif" alt="Autonomous systems animation" data-keep-image="true">
+          </div>
+
+          <div class="home-media-tile top-tile">
+            <img src="images/research/MinMax-DBaS-DDP_moderate_2Results_95_wide.png" alt="Research visual" data-keep-image="true">
+          </div>
+
+          <div class="home-media-tile top-tile">
+            <img src="images/research/lla_mpc_carla.gif" alt="Research visual" data-keep-image="true">
+          </div>
+        </div>
+
+        <div class="home-media-row bottom">
+          <div class="home-media-tile bottom-tile">
+            <img src="images/research/acc_anim.gif" alt="Research visual" data-keep-image="true">
+          </div>
+
+          <div class="home-media-tile bottom-tile">
+            <img src="images/research/cartpole_dbasddp_animate_crop.gif" alt="Autonomous systems animation" data-keep-image="true">
+          </div>
+
+          <div class="home-media-tile bottom-tile square-tile">
+            <img src="images/research/diff_drive_sqs_obstacles_wide.png" alt="Research visual" data-keep-image="true">
+          </div>
+
+          <div class="home-media-tile bottom-tile">
+            <img src="images/research/quadrotor_obstacles.gif" alt="Research visual" data-keep-image="true">
+          </div>
+        </div>
+
+      </div>
+
+
+      <p>
+        <strong>Let’s face it: real-world autonomy is hard.</strong>
+        Autonomous systems must operate under uncertainty, resource limitations, safety constraints and <em>dynamic environments</em> -- often simultaneously.
+      </p>
+
+      <p>
+        At the <strong><span class="cortx-wordmark">CORT<span class="cortx-x">x</span></span></strong> Lab, we develop the <em>mathematical foundations and algorithms</em>
+        underlying <strong>safe, intelligent, and adaptive autonomous and robotic systems</strong>, through <em>principled control and learning frameworks</em>.
+        Our research integrates <strong> control theory, optimization, and artificial intelligence</strong> to create <em>scalable frameworks</em> with applications spanning
+        <em>robotics, transportation, energy, and industrial systems</em>.
+      </p>
+
+<!--      <p>-->
+<!--        <b>Location:</b> Building 22, room 321, King Fahd University of Petroleum and Minerals (KFUPM)-->
+<!--      </p>-->
+
+    </div>
+
+    <!-- NEWS -->
+    <div class="news-section">
+      <heading><b>News</b></heading>
+
+      <ul class="fa-ul news-list">
+        <li>
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <span><b>[Jan 2026]</b></span>
+          Our <a href="https://arxiv.org/abs/2504.15453" target="_blank" rel="noopener noreferrer">paper</a> on safe feedback control with online Riccati synthesis got accepted to the <b>2026 American Control Conference (ACC)</b>!
+        </li>
+
+        <li>
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <span><b>[Dec 2025]</b></span>
+          <a href="https://ieeexplore.ieee.org/abstract/document/11060879" target="_blank" rel="noopener noreferrer">Barrier States Theory</a> for Safety-Critical Multiobjective Control is officially published in the December 2025 issue of <b>IEEE Transactions on Automatic Control (TAC)</b> 🎉!
+        </li>
+
+        <li>
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <span><b>[Nov 2025]</b></span>
+          Dr. Hassan gave a talk on "Safe Decision and Control for Trusted Intelligent Autonomy" at <a href="https://www.kfupm.edu.sa/" target="_blank" rel="noopener noreferrer">KFUPM</a> in the Controls Engineering Fall seminar series.
+        </li>
+
+        <li>
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <span><b>[Oct 2025]</b></span>
+          Dr. Hassan presented <a href="https://ieeexplore.ieee.org/document/11246261" target="_blank" rel="noopener noreferrer">Look-Back and Look-Ahead Adaptive Model Predictive Control (LLA-MPC)</a> at the <b>2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</b> 🤖 in Hangzhou, China.
+        </li>
+      </ul>
+
+      <div class="news-toggle-wrap">
+        <button class="news-toggle-button" onclick="toggleOlderNews()">
+          <i class="fa fa-chevron-down" aria-hidden="true"></i> See More
+        </button>
+      </div>
+
+      <div id="older-news" style="display:none;">
+        <ul class="fa-ul news-list">
+          <li>
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <span><b>[Aug 2025]</b></span>
+            Dr. Hassan joined <a href="https://www.kfupm.edu.sa/" target="_blank" rel="noopener noreferrer">KFUPM</a> as an Assistant Professor at the Control & Instrumentation Engineering Department with affiliation to the Smart Mobility and Logistics (SML) Interdisciplinary Research Center.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom-spacer"></div>
+  </div>
+
+  <script>
+    function toggleOlderNews() {
+      var x = document.getElementById("older-news");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+
+  <script src="placeholder.js"></script>
+</body>
+</html>

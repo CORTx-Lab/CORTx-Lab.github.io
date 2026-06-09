@@ -1,0 +1,467 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Research | Autonomous Control, Optimization and Robotics (<strong><span class="cortx-wordmark">CORT<span class="cortx-x">x</span></span></strong> )</title>
+
+  <meta name="author" content="Hassan Almubarak">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/squared.png">
+
+  <style>
+    .research-section-title {
+      font-size: 34px;
+      font-weight: 700;
+      color: #0B3041;
+      margin-bottom: 12px;
+    }
+
+    .research-intro {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .research-subtitle {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0B3041;
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+
+    .research-banner {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid #d8d8d8;
+      margin-top: 10px;
+      margin-bottom: 28px;
+    }
+
+    .thrust-card {
+      border: 1px solid #dddddd;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 24px;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .thrust-grid {
+      display: grid;
+      grid-template-columns: 38% 62%;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .thrust-image {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #d8d8d8;
+      display: block;
+    }
+
+    .thrust-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0B3041;
+      margin-bottom: 10px;
+    }
+
+    .thrust-summary {
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .keyword-row {
+      margin-top: 8px;
+      margin-bottom: 16px;
+      line-height: 2.1;
+    }
+
+    .keyword-pill {
+      display: inline-block;
+      padding: 4px 10px;
+      margin: 4px 6px 4px 0;
+      border-radius: 999px;
+      border: 1px solid #cfd8dc;
+      background: #f7fafb;
+      color: #0B3041;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .expand-btn {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: 8px;
+      border: 1px solid #0B3041;
+      background: white;
+      color: #0B3041;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .expand-btn:hover {
+      background: #0B3041;
+      color: white;
+    }
+
+    .expand-content {
+      display: none;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .expand-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .selected-links {
+      margin-top: 10px;
+      line-height: 2.0;
+    }
+
+    .selected-links a {
+      margin-right: 14px;
+      white-space: nowrap;
+    }
+
+    .applications-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 14px;
+      margin-bottom: 16px;
+    }
+
+    .app-card {
+      border: 1px solid #dddddd;
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .app-card img {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .app-card-body {
+      padding: 12px 14px 14px 14px;
+    }
+
+    .app-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0B3041;
+      margin-bottom: 8px;
+    }
+
+    .app-card-text {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .note-box {
+      border-left: 4px solid #275317;
+      background: #f8fbf7;
+      padding: 14px 16px;
+      margin-top: 22px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .pub-note {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    @media screen and (max-width: 900px) {
+      .thrust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .applications-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .thrust-title {
+        font-size: 24px;
+      }
+
+      .research-section-title {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<div class="header" style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-bottom:0px">
+  <a href="index.html" class="logo" style="color:black;font-size:18px; padding-top:30px">
+    <img src="images/blue_green_ver.png" height="120" data-keep-image="true" alt="CORTx logo">
+  </a>
+  <div class="header-right" style="padding-top:50px;">
+    <a href="index.html" style="font-size: 23px; color:#0B3041">Home</a>
+    <a href="people.html" style="font-size: 23px; color:#0B3041">People</a>
+    <a href="research.html" style="font-size: 23px; color:#0B3041">Research</a>
+    <a href="publications.html" style="font-size: 23px; color:#0B3041">Publications</a>
+    <a href="join.html" style="font-size: 23px; color:#0B3041">Join</a>
+    <br>
+    <div class="header-right" style="padding-top:0px;">
+      <a href="https://github.com/CORTx-Lab"><i class="fa fa-github" style="font-size:28px;color:#275317;"></i></a>
+      <!-- Optional later:
+      <a href="https://www.youtube.com/"><i class="fa fa-youtube" style="font-size:28px;color:#275317;"></i></a>
+      -->
+    </div>
+  </div>
+</div>
+
+<body>
+
+<table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <td style="padding:20px;">
+
+        <!-- PAGE TITLE -->
+        <div class="research-section-title">Research</div>
+
+        <!-- INTRO -->
+        <p class="research-intro">
+          The <strong><span class="cortx-wordmark">CORT<span class="cortx-x">x</span></span></strong>  Lab develops control, optimization, and learning methods for autonomous systems operating under uncertainty, safety constraints, and changing environments. Our work lies at the intersection of safety-critical control, model predictive control, adaptive and learning-enabled decision making, and real-world autonomy for robotics and mobility systems.
+        </p>
+
+        <p class="research-intro">
+          We are particularly interested in combining strong control-theoretic foundations with practical deployment in safety-critical settings, including autonomous driving, racing, off-road robotics, aerial systems, and robotic autonomy in uncertain environments.
+        </p>
+
+        <div class="research-subtitle">Core Research Thrusts</div>
+
+        <!-- THRUST 1 -->
+        <div class="thrust-card">
+          <div class="thrust-grid">
+            <div>
+              <img src="images/research/safe_control.png"
+                   alt="Safety-Critical Control representative figure"
+                   class="thrust-image"
+                   data-keep-image="true">
+            </div>
+
+            <div>
+              <div class="thrust-title">Safety-Critical Control</div>
+
+              <div class="thrust-summary">
+                We develop control-theoretic methods for enforcing safety in nonlinear constrained systems.
+                A central theme in our work is the design of safety-embedded control architectures, including barrier state (BaS) methods that integrate safety directly into system dynamics and feedback design.
+                Our research studies multi-objective safe control (stabilization, tracking, regulation, etc.), safe optimal control and nonlinear safe feedback synthesis with theoretical guarantees and scalable algorithms.
+                We are interested in both theory and computation: from new formulations for safe multi-objective control to practical algorithms for robotic autonomy in cluttered or uncertain environments.
+              </div>
+
+<!--              <div class="keyword-row">-->
+<!--                <span class="keyword-pill">Barrier states</span>-->
+<!--                <span class="keyword-pill">Safety-embedded systems</span>-->
+<!--                <span class="keyword-pill">Safe nonlinear control</span>-->
+<!--                <span class="keyword-pill">Multi-objective control</span>-->
+<!--                <span class="keyword-pill">Riccati / HJB methods</span>-->
+<!--              </div>-->
+
+              <button class="expand-btn" onclick="toggleSection('thrust1')">More details</button>
+
+              <div id="thrust1" class="expand-content">
+
+                <div class="selected-links">
+                  <strong>Selected papers:</strong><br>
+                  <a href="https://arxiv.org/abs/2310.07022">Barrier States Theory for Safety-Critical Multi-Objective Control</a>
+                  <a href="https://arxiv.org/abs/2105.14608">Safety Embedded Differential Dynamic Programming Using DBaS</a>
+                  <a href="https://arxiv.org/abs/2504.15453">Barrier-Riccati Synthesis for Nonlinear Safe Control</a>
+                  <a href="https://arxiv.org/abs/2504.15423">Safety Embedded Adaptive Control Using Barrier States</a>
+                  <a href="https://arxiv.org/abs/2102.10253">Safety Embedded Control of Nonlinear Systems via Barrier States</a>
+                  <a href="https://arxiv.org/abs/2106.15560">HJB Based Optimal Safe Control Using Control Barrier Functions</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- THRUST 2 -->
+        <div class="thrust-card">
+          <div class="thrust-grid">
+            <div>
+              <img src="images/research/dbas_ddp_iterative_improvement_crop.gif"
+                   alt="Trajectory Optimization and MPC representative figure"
+                   class="thrust-image"
+                   data-keep-image="true">
+            </div>
+
+            <div>
+              <div class="thrust-title">Trajectory Optimization and Model Predictive Control</div>
+
+              <div class="thrust-summary">
+                We study optimization-based control and planning methods for autonomous systems operating under model uncertainty, disturbances, and safety constraints. Our work includes robust and safe trajectory optimization, MPC, sampling-based control, and differentiable optimization. A key objective is to design methods that remain computationally practical while improving robustness, safety, and performance in complex robotic environments.
+              </div>
+
+<!--              <div class="keyword-row">-->
+<!--                <span class="keyword-pill">Trajectory optimization</span>-->
+<!--                <span class="keyword-pill">Robust control</span>-->
+<!--                <span class="keyword-pill">Model predictive control</span>-->
+<!--                <span class="keyword-pill">Differentiable MPC</span>-->
+<!--                <span class="keyword-pill">Sampling-based planning</span>-->
+<!--              </div>-->
+
+              <button class="expand-btn" onclick="toggleSection('thrust2')">More details</button>
+
+              <div id="thrust2" class="expand-content">
+
+                <div class="selected-links">
+                  <strong>Selected papers:</strong><br>
+                  <a href="https://arxiv.org/abs/2308.08426">Differentiable Robust Model Predictive Control</a>
+                  <a href="https://arxiv.org/abs/2505.19512">LLA-MPC: Fast Adaptive Control for Autonomous Racing</a>
+                  <a href="https://arxiv.org/abs/2105.14608">Safety Embedded Differential Dynamic Programming Using DBaS</a>
+                  <a href="https://arxiv.org/abs/2303.03441">Safe Importance Sampling in Model Predictive Path Integral Control</a>
+                  <a href="https://arxiv.org/abs/2111.02979">BaS Embedded Iterative Dynamic Game for Robust and Safe Traj.Opt</a>
+                  <a href="https://arxiv.org/html/2303.03360v2">T-BaS Embedded Traj.Opt for Improved Exploration and Exploitation</a>
+                </div>
+
+<!--                <div class="selected-links">-->
+<!--                  <strong>Optional extras:</strong><br>-->
+<!--                  <a href="PLACEHOLDER_PROJECT_PAGE_2">Project page</a>-->
+<!--                  <a href="PLACEHOLDER_VIDEO_2">Video</a>-->
+<!--                  <a href="PLACEHOLDER_CODE_2">Code</a>-->
+<!--                </div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- THRUST 3 -->
+        <div class="thrust-card">
+          <div class="thrust-grid">
+            <div>
+              <img src="images/research/lla_mpc2.gif"
+                   alt="Data-driven and Learning Control representative figure"
+                   class="thrust-image"
+                   data-keep-image="true">
+            </div>
+
+            <div>
+              <div class="thrust-title">Learning and Data-driven Control</div>
+
+              <div class="thrust-summary">
+                We develop learning-based, adaptive and data-driven control methods for systems whose dynamics, environments, or operating conditions change over time. Our interests include safe adaptive control, learning-enabled control under uncertainty, Gaussian-process-based safe control, and online adaptation in high-performance settings. Rather than treating learning as a black box, we aim to integrate adaptation and data-driven modeling with control structure, safety, and real-time decision making.
+              </div>
+
+<!--              <div class="keyword-row">-->
+<!--                <span class="keyword-pill">Adaptive control</span>-->
+<!--                <span class="keyword-pill">Learning-enabled control</span>-->
+<!--                <span class="keyword-pill">Gaussian processes</span>-->
+<!--                <span class="keyword-pill">Online adaptation</span>-->
+<!--                <span class="keyword-pill">Uncertainty-aware autonomy</span>-->
+<!--              </div>-->
+
+              <button class="expand-btn" onclick="toggleSection('thrust3')">More details</button>
+
+              <div id="thrust3" class="expand-content">
+
+                <div class="selected-links">
+                  <strong>Selected papers:</strong><br>
+                  <a href="https://arxiv.org/abs/2505.19512">LLA-MPC: Fast Adaptive Control for Autonomous Racing</a>
+                  <a href="https://arxiv.org/abs/2308.08426">Differentiable Robust Model Predictive Control</a>
+                  <a href="https://arxiv.org/abs/2504.15423">Safety Embedded Adaptive Control Using Barrier States</a>
+                  <a href="https://arxiv.org/abs/2212.00268">Gaussian Process Barrier States for Safe Traj. Opt. and Control</a>
+                  <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2023-1051">L1 Adaptive Control of Constrained Systems Using Barrier States</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--        &lt;!&ndash; APPLICATIONS &ndash;&gt;-->
+<!--        <div class="research-subtitle" style="margin-top:30px;">Applications and Testbeds</div>-->
+
+<!--        <p class="research-intro" style="font-size:16px; margin-bottom:10px;">-->
+<!--          Our methods are motivated by autonomous systems that must operate safely and effectively outside idealized settings. We use these application domains both to validate theory and to drive new questions in safety, adaptation, and high-performance control.-->
+<!--        </p>-->
+
+<!--        <div class="applications-grid">-->
+
+<!--          <div class="app-card">-->
+<!--            <img src="images/research/autonomous_racing_placeholder.jpg"-->
+<!--                 alt="Autonomous racing placeholder"-->
+<!--                 data-keep-image="true">-->
+<!--            <div class="app-card-body">-->
+<!--              <div class="app-card-title">Autonomous Racing</div>-->
+<!--              <div class="app-card-text">-->
+<!--                High-performance autonomous racing provides a demanding environment for adaptive control, planning under uncertainty, and real-time decision making at the edge of handling limits.-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="app-card">-->
+<!--            <img src="images/research/offroad_autonomy_placeholder.jpg"-->
+<!--                 alt="Off-road autonomy placeholder"-->
+<!--                 data-keep-image="true">-->
+<!--            <div class="app-card-body">-->
+<!--              <div class="app-card-title">Off-Road and Extreme Autonomy</div>-->
+<!--              <div class="app-card-text">-->
+<!--                Off-road driving and aggressive autonomy motivate robust and learning-enabled control methods capable of handling changing terrain, uncertainty, and limited model fidelity.-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="app-card">-->
+<!--            <img src="images/research/robotics_testbeds_placeholder.jpg"-->
+<!--                 alt="Robotics testbeds placeholder"-->
+<!--                 data-keep-image="true">-->
+<!--            <div class="app-card-body">-->
+<!--              <div class="app-card-title">Robotics in Uncertain Environments</div>-->
+<!--              <div class="app-card-text">-->
+<!--                From aerial systems to constrained robotic navigation, we study autonomy in cluttered, uncertain, and safety-critical settings where theory and deployment must meet.-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--        </div>-->
+
+        <div class="note-box">
+          <p>
+          <b>Current directions.</b> Our current efforts include autonomous racing, off-road driving, F1/10 platforms, safety-critical learning and control, and control architectures for autonomous systems operating under uncertainty and changing environmental conditions. We are also interested in emerging directions at the intersection of <b>control and modern AI</b>, including <b>control-theoretic foundations for AI-enabled systems</b> and the use of <b>AI, generative AI, and LLMs</b> for <b>safety-critical control</b>, planning, and decision making.
+          </p>
+        </div>
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  function toggleSection(id) {
+    var section = document.getElementById(id);
+    if (section.style.display === "block") {
+      section.style.display = "none";
+    } else {
+      section.style.display = "block";
+    }
+  }
+</script>
+
+<script src="placeholder.js"></script>
+</body>
+</html>
