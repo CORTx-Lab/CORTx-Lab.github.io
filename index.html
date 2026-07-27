@@ -103,6 +103,105 @@
       line-height: 1.2;
     }
 
+.featured-software-section {
+  padding: 0 20px 28px 20px;
+}
+
+.featured-software-heading {
+  margin: 0 0 12px 0;
+  color: #0B3041;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.featured-software-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid #d8d8d8;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.featured-software-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+.featured-software-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
+}
+
+.featured-software-content h3 {
+  margin: 0 0 8px 0;
+  color: #0B3041;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.featured-software-content p {
+  margin: 0 0 14px 0;
+  line-height: 1.55;
+}
+
+.software-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.software-badge {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #eef3e8;
+  color: #275317;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.software-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.software-button {
+  display: inline-block;
+  padding: 8px 13px;
+  border: 1px solid #275317;
+  border-radius: 7px;
+  color: #275317;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.software-button:hover {
+  opacity: 0.88;
+  text-decoration: none;
+}
+
+.software-button.primary {
+  color: #ffffff;
+  background: #275317;
+}
+
     .news-section {
       padding: 0 20px 20px 20px;
     }
@@ -144,6 +243,23 @@
       .home-media-tile.bottom-tile {
         height: 220px;
       }
+
+      .featured-software-card {
+  grid-template-columns: 1fr;
+}
+
+.featured-software-visual {
+  min-height: 0;
+}
+
+.featured-software-visual img {
+  max-height: 220px;
+}
+
+.software-actions {
+  align-items: flex-start;
+}
+
     }
   </style>
 </head>
@@ -231,11 +347,85 @@
 
     </div>
 
+    <!-- FEATURED SOFTWARE -->
+<section class="featured-software-section" aria-labelledby="featured-software-heading">
+  <h2 id="featured-software-heading" class="featured-software-heading">
+    Latest Software Release
+  </h2>
+
+  <div class="featured-software-card">
+
+    <a class="featured-software-visual"
+       href="https://github.com/CORTx-Lab/barrier-states-matlab"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Explore the Barrier States MATLAB Toolbox">
+      <img
+        src="images/software/bas_workflow.svg"
+        alt="Barrier States MATLAB Toolbox workflow"
+        data-keep-image="true">
+    </a>
+
+    <div class="featured-software-content">
+      <h3>Barrier States MATLAB Toolbox</h3>
+
+      <div class="software-meta">
+        <span class="software-badge">MATLAB</span>
+        <span class="software-badge">v0.1.0</span>
+        <span class="software-badge">Apache-2.0</span>
+        <span class="software-badge">Open Source</span>
+      </div>
+
+      <p>
+        An open-source MATLAB toolbox for constructing Barrier States and
+        safety-embedded systems, with reusable workflows for LQR, SDRE,
+        PID, DDP/iLQR, simulation, and visualization.
+      </p>
+
+      <div class="software-actions">
+        <a class="software-button primary"
+           href="https://github.com/CORTx-Lab/barrier-states-matlab"
+           target="_blank"
+           rel="noopener noreferrer">
+          View toolbox
+        </a>
+
+        <a class="software-button"
+           href="https://github.com/CORTx-Lab/barrier-states-matlab/tree/main/examples"
+           target="_blank"
+           rel="noopener noreferrer">
+          View examples
+        </a>
+
+        <a class="software-button"
+           href="https://github.com/CORTx-Lab/barrier-states-matlab/releases/tag/v0.1.0"
+           target="_blank"
+           rel="noopener noreferrer">
+          v0.1.0 release
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
     <!-- NEWS -->
     <div class="news-section">
       <heading><b>News</b></heading>
 
       <ul class="fa-ul news-list">
+        <li>
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <span><b>[Jul 2026]</b></span>
+          We released the first public version of the
+          <a href="https://github.com/CORTx-Lab/barrier-states-matlab/releases/tag/v0.1.0"
+             target="_blank"
+             rel="noopener noreferrer">
+            Barrier States MATLAB Toolbox
+          </a>
+          for safety-embedded control 🚀🛡️!
+        </li>
         <li>
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
           <span><b>[May 2026]</b></span>
