@@ -9,13 +9,11 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-KFDW0RJJ85');
   </script>
 
   <title>Autonomous Control, Optimization and Robotics (CORTx) Lab | Safety-Critical Control, Robotics, and AI at KFUPM</title>
   <meta name="description" content="CORTx Lab at KFUPM works on safety-critical control, robotics, optimization, adaptive and learning-enabled control, autonomous racing, off-road driving, and AI for autonomy.">
-
   <meta name="author" content="Hassan Almubarak">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -103,104 +101,132 @@
       line-height: 1.2;
     }
 
-.featured-software-section {
-  padding: 0 20px 28px 20px;
-}
+    .featured-software-section {
+      padding: 0 20px 28px 20px;
+    }
 
-.featured-software-heading {
-  margin: 0 0 12px 0;
-  color: #0B3041;
-  font-size: 28px;
-  line-height: 1.2;
-}
+    .featured-software-heading {
+      margin: 0 0 12px 0;
+      color: #0B3041;
+      font-size: 28px;
+      line-height: 1.2;
+    }
 
-.featured-software-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: 22px;
-  align-items: center;
-  padding: 18px;
-  border: 1px solid #d8d8d8;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
+    .featured-software-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
 
-.featured-software-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 220px;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #f7f7f7;
-}
+    .software-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #d8d8d8;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
 
-.featured-software-visual img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 240px;
-  object-fit: contain;
-}
+    .software-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 210px;
+      padding: 10px;
+      overflow: hidden;
+      background: #f7f7f7;
+      border-bottom: 1px solid #e3e3e3;
+    }
 
-.featured-software-content h3 {
-  margin: 0 0 8px 0;
-  color: #0B3041;
-  font-size: 24px;
-  line-height: 1.25;
-}
+    .software-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
-.featured-software-content p {
-  margin: 0 0 14px 0;
-  line-height: 1.55;
-}
+    .software-card-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 16px;
+    }
 
-.software-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 12px;
-}
+    .software-card-content h3 {
+      margin: 0 0 8px 0;
+      color: #0B3041;
+      font-size: 22px;
+      line-height: 1.25;
+    }
 
-.software-badge {
-  display: inline-block;
-  padding: 4px 9px;
-  border-radius: 999px;
-  background: #eef3e8;
-  color: #275317;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.2;
-}
+    .software-card-content p {
+      margin: 0 0 13px 0;
+      line-height: 1.55;
+    }
 
-.software-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-}
+    .software-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 12px;
+    }
 
-.software-button {
-  display: inline-block;
-  padding: 8px 13px;
-  border: 1px solid #275317;
-  border-radius: 7px;
-  color: #275317;
-  background: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-}
+    .software-badge {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #eef3e8;
+      color: #275317;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
 
-.software-button:hover {
-  opacity: 0.88;
-  text-decoration: none;
-}
+    .software-install {
+      display: inline-block;
+      align-self: flex-start;
+      margin: 0 0 14px 0;
+      padding: 7px 10px;
+      border: 1px solid #d8d8d8;
+      border-radius: 7px;
+      background: #f7f7f7;
+      color: #0B3041;
+      font-family: monospace;
+      font-size: 13px;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
 
-.software-button.primary {
-  color: #ffffff;
-  background: #275317;
-}
+    .software-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: auto;
+    }
+
+    .software-button {
+      display: inline-block;
+      padding: 8px 13px;
+      border: 1px solid #275317;
+      border-radius: 7px;
+      color: #275317;
+      background: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .software-button:hover {
+      opacity: 0.88;
+      text-decoration: none;
+    }
+
+    .software-button.primary {
+      color: #ffffff;
+      background: #275317;
+    }
 
     .news-section {
       padding: 0 20px 20px 20px;
@@ -244,22 +270,25 @@
         height: 220px;
       }
 
-      .featured-software-card {
-  grid-template-columns: 1fr;
-}
+      .featured-software-grid {
+        grid-template-columns: 1fr;
+      }
 
-.featured-software-visual {
-  min-height: 0;
-}
+      .software-visual {
+        height: auto;
+        min-height: 0;
+      }
 
-.featured-software-visual img {
-  max-height: 220px;
-}
+      .software-visual img {
+        max-height: 240px;
+      }
+    }
 
-.software-actions {
-  align-items: flex-start;
-}
-
+    @media screen and (max-width: 520px) {
+      .software-install {
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
     }
   </style>
 </head>
@@ -280,7 +309,6 @@
       <br>
       <div class="header-right" style="padding-top:0;">
         <a href="https://github.com/CORTx-Lab"><i class="fa fa-github" style="font-size:28px;color:#275317;"></i></a>
-        <!-- <a href="https://www.youtube.com/"><i class="fa fa-youtube" style="font-size:28px;color:#275317;"></i></a> -->
       </div>
     </div>
   </div>
@@ -292,17 +320,15 @@
         <b>Welcome to the Autonomous Control, Optimization, and Robotics (<strong><span class="cortx-wordmark">CORT<span class="cortx-x">x</span></span></strong>) Lab</b>
         <em>(yes, pronounced “cortex” &#129504;!)</em> at <a href="https://www.kfupm.edu.sa/" target="_blank" rel="noopener noreferrer">KFUPM</a>.
       </p>
-      <div class="home-media-grid">
 
+      <div class="home-media-grid">
         <div class="home-media-row top">
           <div class="home-media-tile top-tile">
             <img src="images/research/dt_mpc_robotarium_x2.gif" alt="Autonomous systems animation" data-keep-image="true">
           </div>
-
           <div class="home-media-tile top-tile">
             <img src="images/research/MinMax-DBaS-DDP_moderate_2Results_95_wide.png" alt="Research visual" data-keep-image="true">
           </div>
-
           <div class="home-media-tile top-tile">
             <img src="images/research/lla_mpc_carla.gif" alt="Research visual" data-keep-image="true">
           </div>
@@ -312,22 +338,17 @@
           <div class="home-media-tile bottom-tile">
             <img src="images/research/acc_anim.gif" alt="Research visual" data-keep-image="true">
           </div>
-
           <div class="home-media-tile bottom-tile">
             <img src="images/research/cartpole_dbasddp_animate_crop.gif" alt="Autonomous systems animation" data-keep-image="true">
           </div>
-
           <div class="home-media-tile bottom-tile square-tile">
             <img src="images/research/diff_drive_sqs_obstacles_wide.png" alt="Research visual" data-keep-image="true">
           </div>
-
           <div class="home-media-tile bottom-tile">
             <img src="images/research/quadrotor_obstacles.gif" alt="Research visual" data-keep-image="true">
           </div>
         </div>
-
       </div>
-
 
       <p>
         <strong>Let’s face it: real-world autonomy is hard.</strong>
@@ -340,81 +361,145 @@
         Our research integrates <strong> control theory, optimization, and artificial intelligence</strong> to create <em>scalable frameworks</em> with applications spanning
         <em>robotics, transportation, energy, and industrial systems</em>.
       </p>
-
-<!--      <p>-->
-<!--        <b>Location:</b> Building 22, room 321, King Fahd University of Petroleum and Minerals (KFUPM)-->
-<!--      </p>-->
-
     </div>
 
-    <!-- FEATURED SOFTWARE -->
-<section class="featured-software-section" aria-labelledby="featured-software-heading">
-  <h2 id="featured-software-heading" class="featured-software-heading">
-    Latest Software Release
-  </h2>
+    <!-- OPEN-SOURCE SOFTWARE -->
+    <section class="featured-software-section" aria-labelledby="featured-software-heading">
+      <h2 id="featured-software-heading" class="featured-software-heading">
+        Open-Source Software
+      </h2>
 
-  <div class="featured-software-card">
+      <div class="featured-software-grid">
 
-    <a class="featured-software-visual"
-       href="https://github.com/CORTx-Lab/barrier-states-matlab"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Explore the Barrier States MATLAB Toolbox">
-      <img
-        src="images/software/bas_workflow.svg"
-        alt="Barrier States MATLAB Toolbox workflow"
-        data-keep-image="true">
-    </a>
+        <article class="software-card">
+          <a class="software-visual"
+             href="https://github.com/CORTx-Lab/barrier-states-python"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Explore the Barrier States Python Library">
+            <img
+              src="images/software/bas_python_workflow.svg"
+              alt="Barrier States Python Library workflow"
+              data-keep-image="true">
+          </a>
 
-    <div class="featured-software-content">
-      <h3>Barrier States MATLAB Toolbox</h3>
+          <div class="software-card-content">
+            <h3>Barrier States Python Library</h3>
 
-      <div class="software-meta">
-        <span class="software-badge">MATLAB</span>
-        <span class="software-badge">v0.1.0</span>
-        <span class="software-badge">Apache-2.0</span>
-        <span class="software-badge">Open Source</span>
+            <div class="software-meta">
+              <span class="software-badge">Python 3.10+</span>
+              <span class="software-badge">v0.1.0</span>
+              <span class="software-badge">Apache-2.0</span>
+              <span class="software-badge">Open Source</span>
+            </div>
+
+            <p>
+              An open-source Python library for constructing Barrier States and
+              safety-embedded systems, with feedback control, SDRE, DDP/iLQR,
+              MPC, simulation, plotting, and animation.
+            </p>
+
+            <code class="software-install">pip install barrier-states-python</code>
+
+            <div class="software-actions">
+              <a class="software-button primary"
+                 href="https://github.com/CORTx-Lab/barrier-states-python"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View library
+              </a>
+              <a class="software-button"
+                 href="https://pypi.org/project/barrier-states-python/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                PyPI
+              </a>
+              <a class="software-button"
+                 href="https://github.com/CORTx-Lab/barrier-states-python/tree/main/examples"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View examples
+              </a>
+              <a class="software-button"
+                 href="https://github.com/CORTx-Lab/barrier-states-python/releases/tag/v0.1.0"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                v0.1.0 release
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="software-card">
+          <a class="software-visual"
+             href="https://github.com/CORTx-Lab/barrier-states-matlab"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Explore the Barrier States MATLAB Toolbox">
+            <img
+              src="images/software/bas_matlab_workflow.svg"
+              alt="Barrier States MATLAB Toolbox workflow"
+              data-keep-image="true">
+          </a>
+
+          <div class="software-card-content">
+            <h3>Barrier States MATLAB Toolbox</h3>
+
+            <div class="software-meta">
+              <span class="software-badge">MATLAB</span>
+              <span class="software-badge">v0.1.0</span>
+              <span class="software-badge">Apache-2.0</span>
+              <span class="software-badge">Open Source</span>
+            </div>
+
+            <p>
+              An open-source MATLAB toolbox for constructing Barrier States and
+              safety-embedded systems, with reusable workflows for LQR, SDRE,
+              PID, DDP/iLQR, simulation, and visualization.
+            </p>
+
+            <div class="software-actions">
+              <a class="software-button primary"
+                 href="https://github.com/CORTx-Lab/barrier-states-matlab"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View toolbox
+              </a>
+              <a class="software-button"
+                 href="https://github.com/CORTx-Lab/barrier-states-matlab/tree/main/examples"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View examples
+              </a>
+              <a class="software-button"
+                 href="https://github.com/CORTx-Lab/barrier-states-matlab/releases/tag/v0.1.0"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                v0.1.0 release
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
-
-      <p>
-        An open-source MATLAB toolbox for constructing Barrier States and
-        safety-embedded systems, with reusable workflows for LQR, SDRE,
-        PID, DDP/iLQR, simulation, and visualization.
-      </p>
-
-      <div class="software-actions">
-        <a class="software-button primary"
-           href="https://github.com/CORTx-Lab/barrier-states-matlab"
-           target="_blank"
-           rel="noopener noreferrer">
-          View toolbox
-        </a>
-
-        <a class="software-button"
-           href="https://github.com/CORTx-Lab/barrier-states-matlab/tree/main/examples"
-           target="_blank"
-           rel="noopener noreferrer">
-          View examples
-        </a>
-
-        <a class="software-button"
-           href="https://github.com/CORTx-Lab/barrier-states-matlab/releases/tag/v0.1.0"
-           target="_blank"
-           rel="noopener noreferrer">
-          v0.1.0 release
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
+    </section>
 
     <!-- NEWS -->
     <div class="news-section">
-      <heading><b>News</b></heading>
+      <h2>News</h2>
 
       <ul class="fa-ul news-list">
+        <li>
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <span><b>[Aug 2026]</b></span>
+          We released the first public version of the
+          <a href="https://github.com/CORTx-Lab/barrier-states-python/releases/tag/v0.1.0"
+             target="_blank"
+             rel="noopener noreferrer">
+            Barrier States Python Library
+          </a>
+          for safety-embedded control and trajectory optimization 🐍🛡️!
+        </li>
         <li>
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
           <span><b>[Jul 2026]</b></span>
@@ -436,19 +521,16 @@
           <span><b>[Jan 2026]</b></span>
           Our <a href="https://arxiv.org/abs/2504.15453" target="_blank" rel="noopener noreferrer">paper</a> on safe feedback control with online Riccati synthesis got accepted to the <b>2026 American Control Conference (ACC)</b>!
         </li>
-
         <li>
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
           <span><b>[Dec 2025]</b></span>
           <a href="https://ieeexplore.ieee.org/abstract/document/11060879" target="_blank" rel="noopener noreferrer">Barrier States Theory</a> for Safety-Critical Multiobjective Control is officially published in the December 2025 issue of <b>IEEE Transactions on Automatic Control (TAC)</b> 🎉!
         </li>
-
         <li>
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
           <span><b>[Nov 2025]</b></span>
           Dr. Hassan gave a talk on "Safe Decision and Control for Trusted Intelligent Autonomy" at <a href="https://www.kfupm.edu.sa/" target="_blank" rel="noopener noreferrer">KFUPM</a> in the Controls Engineering Fall seminar series.
         </li>
-
         <li>
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
           <span><b>[Oct 2025]</b></span>
@@ -476,7 +558,7 @@
     <div class="bottom-spacer"></div>
   </div>
 
-    <script type="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ResearchOrganization",
@@ -494,6 +576,7 @@
     ]
   }
   </script>
+
   <script>
     function toggleOlderNews() {
       var x = document.getElementById("older-news");
@@ -506,7 +589,6 @@
   </script>
 
   <script src="placeholder.js"></script>
-
 
 </body>
 </html>
