@@ -18,10 +18,7 @@
 
   <meta name="author" content="Hassan Almubarak">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/squared.png">
   <link rel="canonical" href="https://cortx-lab.github.io/research.html">
@@ -146,8 +143,10 @@
     }
 
     .selected-links a {
-      margin-right: 14px;
-      white-space: nowrap;
+      display: block;
+      margin: 6px 0;
+      white-space: normal;
+      line-height: 1.5;
     }
 
     .applications-grid {
@@ -203,6 +202,54 @@
       line-height: 1.8;
     }
 
+    .project-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .research-project-card {
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      border: 1px solid #dfe6e2;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .research-project-label {
+      margin-bottom: 8px;
+      color: #275317;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .research-project-card h3 {
+      margin: 0 0 10px 0;
+      color: #0B3041;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    .research-project-card p {
+      margin: 0 0 14px 0;
+      line-height: 1.7;
+    }
+
+    .research-project-links {
+      margin-top: auto;
+    }
+
+    .research-project-links a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      font-size: 15px;
+    }
+
     @media screen and (max-width: 900px) {
       .thrust-grid {
         grid-template-columns: 1fr;
@@ -219,9 +266,17 @@
       .research-section-title {
         font-size: 30px;
       }
+
+      .project-card-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
+<body>
+
+
 
 <div class="header" style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-bottom:0px">
   <a href="index.html" class="logo" style="color:black;font-size:18px; padding-top:30px">
@@ -234,17 +289,24 @@
     <a href="publications.html" style="font-size: 23px; color:#0B3041">Publications</a>
     <a href="join.html" style="font-size: 23px; color:#0B3041">Join</a>
     <br>
-    <div class="header-right" style="padding-top:0px;">
-      <a href="https://github.com/CORTx-Lab"><i class="fa fa-github" style="font-size:28px;color:#275317;"></i></a>
-      <!-- Optional later:
-      <a href="https://www.youtube.com/"><i class="fa fa-youtube" style="font-size:28px;color:#275317;"></i></a>
-      -->
+    <div class="header-right header-social-links" style="padding-top:0px;">
+      <a href="https://github.com/CORTx-Lab"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="CORTx Lab GitHub"
+         title="CORTx Lab GitHub">
+        <i class="fa fa-github" style="font-size:28px;color:#275317;" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.youtube.com/@CORTxLab"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="CORTx Lab YouTube"
+         title="CORTx Lab YouTube">
+        <i class="fa fa-youtube-play" style="font-size:28px;color:#275317;" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 </div>
-
-<body>
-
 <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tbody>
     <tr>
@@ -298,6 +360,7 @@
 
                 <div class="selected-links">
                   <strong>Selected papers:</strong><br>
+                  <a href="https://arxiv.org/abs/2610.08765">LBA-CBF: Rapidly Adaptive Safety Filters via Parallel Dynamics Inference</a>
                   <a href="https://arxiv.org/abs/2310.07022">Barrier States Theory for Safety-Critical Multi-Objective Control</a>
                   <a href="https://arxiv.org/abs/2105.14608">Safety Embedded Differential Dynamic Programming Using DBaS</a>
                   <a href="https://arxiv.org/abs/2504.15453">Barrier-Riccati Synthesis for Nonlinear Safe Control</a>
@@ -375,7 +438,7 @@
               <div class="thrust-title">Learning and Data-driven Control</div>
 
               <div class="thrust-summary">
-                We develop learning-based, adaptive and data-driven control methods for systems whose dynamics, environments, or operating conditions change over time. Our interests include safe adaptive control, learning-enabled control under uncertainty, Gaussian-process-based safe control, and online adaptation in high-performance settings. Rather than treating learning as a black box, we aim to integrate adaptation and data-driven modeling with control structure, safety, and real-time decision making.
+                We develop learning-based, adaptive and data-driven control methods for systems whose dynamics, environments, or operating conditions change over time. Our interests include safe adaptive control, iterative learning control for robotic manipulation, learning-enabled control under uncertainty, Gaussian-process-based safe control, and rapid online adaptation in high-performance settings. Rather than treating learning as a black box, we aim to integrate adaptation and data-driven modeling with control structure, safety, constraints, and real-time decision making.
               </div>
 
 <!--              <div class="keyword-row">-->
@@ -391,7 +454,9 @@
               <div id="thrust3" class="expand-content">
 
                 <div class="selected-links">
-                  <strong>Selected papers:</strong><br>
+                  <strong>Selected papers and projects:</strong><br>
+                  <a href="projects/differentiable-ilc/">Differentiable Iterative Learning Control for Black-Box Position-Commanded Manipulators <span aria-hidden="true">→</span> Project Website</a>
+                  <a href="https://arxiv.org/abs/2610.08765">LBA-CBF: Rapidly Adaptive Safety Filters via Parallel Dynamics Inference</a>
                   <a href="https://arxiv.org/abs/2505.19512">LLA-MPC: Fast Adaptive Control for Autonomous Racing</a>
                   <a href="https://arxiv.org/abs/2308.08426">Differentiable Robust Model Predictive Control</a>
                   <a href="https://arxiv.org/abs/2504.15423">Safety Embedded Adaptive Control Using Barrier States</a>
@@ -473,7 +538,5 @@
     }
   }
 </script>
-
-<script src="placeholder.js"></script>
 </body>
 </html>

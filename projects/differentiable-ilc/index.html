@@ -1,0 +1,532 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFDW0RJJ85"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KFDW0RJJ85');
+  </script>
+
+  <title>Differentiable Iterative Learning Control | CORTx Lab</title>
+  <meta name="description" content="Differentiable Iterative Learning Control (Diff-ILC) improves repetitive tracking on black-box position-commanded manipulators through constrained ILC and differentiable parameter adaptation between physical robot trials.">
+  <meta name="author" content="CORTx Lab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Differentiable Iterative Learning Control | CORTx Lab">
+  <meta property="og:description" content="Faster repetitive tracking for black-box position-commanded manipulators through differentiable constrained iterative learning control.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cortx-lab.github.io/projects/differentiable-ilc/">
+  <meta property="og:image" content="https://cortx-lab.github.io/images/projects/differentiable-ilc/graphical_abstract.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="project.css">
+  <link rel="icon" type="image/png" href="../../images/squared.png">
+  <link rel="canonical" href="https://cortx-lab.github.io/projects/differentiable-ilc/">
+</head>
+
+<body>
+  <!-- Keep the top-level navigation identical to the main CORTx site. -->
+  <div class="header project-shell">
+    <a href="../../index.html" class="logo" style="color:black;font-size:18px; padding-top:30px">
+      <img src="../../images/blue_green_ver.png" height="120" alt="CORTx logo">
+    </a>
+
+    <div class="header-right" style="padding-top:50px;">
+      <a href="../../index.html" style="font-size:23px; color:#0B3041">Home</a>
+      <a href="../../people.html" style="font-size:23px; color:#0B3041">People</a>
+      <a href="../../research.html" style="font-size:23px; color:#0B3041">Research</a>
+      <a href="../../publications.html" style="font-size:23px; color:#0B3041">Publications</a>
+      <a href="../../join.html" style="font-size:23px; color:#0B3041">Join</a>
+      <br>
+
+      <div class="header-right header-social-links" style="padding-top:0;">
+        <a href="https://github.com/CORTx-Lab"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="CORTx Lab GitHub"
+           title="CORTx Lab GitHub">
+          <i class="fa fa-github" style="font-size:28px;color:#275317;" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/@CORTxLab"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="CORTx Lab YouTube"
+           title="CORTx Lab YouTube">
+          <i class="fa fa-youtube-play" style="font-size:28px;color:#275317;" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="project-shell project-main">
+    <a class="back-link" href="../../research.html">← Back to Research</a>
+
+    <!-- HERO -->
+    <section class="project-hero" aria-labelledby="project-title">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">Robotic manipulation · Iterative learning control</p>
+          <h1 id="project-title">Differentiable Iterative Learning Control</h1>
+          <p class="project-subtitle">for Black-Box Position-Commanded Manipulators</p>
+
+          <p class="hero-description">
+            <strong>Diff-ILC learns how to improve a robot's commanded trajectory from repeated executions,
+            without access to its low-level servo dynamics.</strong>
+            A constrained ILC update keeps each correction feasible, while differentiating through that update
+            adapts the learning controller between physical trials.
+          </p>
+
+          <p class="authors">Mohammed Al-Ghaili · Yakoop Qasim · Hassan Almubarak</p>
+          <p class="affiliation">Control and Instrumentation Engineering Department · KFUPM · Dhahran, Saudi Arabia</p>
+
+          <div class="hero-actions">
+            <a class="project-button primary" href="#overview-video">
+              <i class="fa fa-play-circle-o" aria-hidden="true"></i> Watch overview
+            </a>
+            <a class="project-button" href="#tracking-experiments">
+              <i class="fa fa-film" aria-hidden="true"></i> Robot trials
+            </a>
+            <!-- Replace this span with an <a> element when the arXiv page is live. -->
+            <span class="project-button disabled-button" title="Add the arXiv URL when available">
+              <i class="fa fa-file-text-o" aria-hidden="true"></i> Paper coming soon
+            </span>
+          </div>
+        </div>
+
+        <figure class="hero-media">
+          <video autoplay muted loop playsinline preload="metadata"
+                 poster="../../images/projects/differentiable-ilc/hero-poster.jpg"
+                 aria-label="DOBOT CR3 executing the Diff-ILC evaluation trajectories">
+            <source src="../../images/projects/differentiable-ilc/diff-ilc-crop.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <figcaption>
+            Physical tracking experiments on the DOBOT CR3 across the four primary evaluation trajectories.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- HEADLINE RESULTS -->
+    <section class="metric-grid" aria-label="Reported experimental highlights">
+      <div class="metric">
+        <strong>78.8%</strong>
+        <span>Lower mean joint-vector RMSE</span>
+      </div>
+      <div class="metric">
+        <strong>76.4%</strong>
+        <span>Lower mean Cartesian RMSE</span>
+      </div>
+      <div class="metric">
+        <strong>2 updates</strong>
+        <span>to reach the reported Trial-3 comparison</span>
+      </div>
+    </section>
+    <p class="metric-note">
+      Trial-3 results for Diff-ILC with ten outer optimization epochs, relative to fixed-parameter
+      constrained model-based ILC; averages over the four primary 0.1 Hz trajectories.
+    </p>
+
+    <nav class="section-nav" aria-label="On this project page">
+      <a href="#overview-video">Overview video</a>
+      <a href="#overview">Idea</a>
+      <a href="#method">Method</a>
+      <a href="#experiments">Experiments</a>
+      <a href="#results">Results</a>
+      <a href="#tracking-experiments">Robot trials</a>
+      <a href="#publication">Publication</a>
+    </nav>
+
+    <!-- VIDEO OVERVIEW -->
+    <section class="project-section project-section-first" id="overview-video">
+      <div class="section-kicker">Video</div>
+      <h2>Three-minute project overview</h2>
+      <p class="section-lead">
+        A compact walkthrough of the problem, the differentiable constrained-ILC loop,
+        and the physical robot experiments.
+      </p>
+
+      <figure class="media-slot overview-video">
+        <div class="media-frame video-frame">
+          <video controls playsinline preload="metadata"
+                 poster="../../images/projects/differentiable-ilc/overview-poster.jpg"
+                 aria-label="Three-minute overview of the Diff-ILC project">
+            <source src="../../images/projects/differentiable-ilc/diffilc_icra_full_video.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+        </div>
+        <figcaption>
+          Project overview: why repetitive tracking is difficult on black-box position-commanded manipulators,
+          how Diff-ILC adapts its constrained learning update, and what changes on the physical robot.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- IDEA -->
+    <section class="project-section" id="overview">
+      <div class="section-kicker">Idea</div>
+      <h2>Learning from each repetition</h2>
+
+      <p>
+        Commercial manipulators often expose joint-position commands while keeping their embedded servo controllers
+        and actuator-level dynamics inaccessible. That makes it difficult to improve tracking by redesigning the
+        low-level controller directly.
+      </p>
+      <p>
+        Diff-ILC instead learns at the command level. After each physical execution, it uses the measured tracking
+        error to compute the next feasible command correction, then adapts the ILC design parameters computationally
+        before the robot moves again.
+      </p>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <h3>Black-box command interface</h3>
+          <p>Uses commanded joint positions and measured robot motion; no torque-level model or access to the embedded servo controller is required.</p>
+        </article>
+        <article class="feature">
+          <h3>Feasible updates</h3>
+          <p>The ILC correction respects joint-position, command-velocity, acceleration, and trial-to-trial correction limits.</p>
+        </article>
+        <article class="feature">
+          <h3>Learning between motions</h3>
+          <p>Several parameter-update epochs can run from the same measured trial, without requiring extra physical robot executions.</p>
+        </article>
+      </div>
+
+      <figure class="media-slot">
+        <div class="media-frame">
+          <img src="../../images/projects/differentiable-ilc/graphical_abstract.jpg"
+               alt="Graphical summary of the Diff-ILC forward execution, backward parameter update, robot tracking task, parameter tuning, and physical-trial convergence"
+               loading="lazy">
+        </div>
+        <figcaption>
+          Diff-ILC at a glance: a constrained ILC update produces the next command, while a task-level loss
+          and KKT hypergradient adapt the ILC parameters between physical trials.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- METHOD -->
+    <section class="project-section" id="method">
+      <div class="section-kicker">Method</div>
+      <h2>How Diff-ILC closes the loop</h2>
+      <p class="section-lead">
+        The method separates expensive physical executions from computational adaptation:
+        the robot supplies the measured trial, and the learning controller can update several times before the next motion.
+      </p>
+
+      <div class="method-flow">
+        <article class="method-card">
+          <span class="method-number">1</span>
+          <h3>Identify once</h3>
+          <p>
+            Paired smooth perturbations identify a compact differential model of how command changes affect measured motion.
+            The model is then kept fixed during the ILC experiments.
+          </p>
+        </article>
+        <article class="method-card">
+          <span class="method-number">2</span>
+          <h3>Execute and correct</h3>
+          <p>
+            The current command is executed on the robot. From the measured error, a finite-horizon constrained QP computes
+            a feasible trial-to-trial correction.
+          </p>
+        </article>
+        <article class="method-card">
+          <span class="method-number">3</span>
+          <h3>Adapt through the optimizer</h3>
+          <p>
+            A real-anchored prediction evaluates the candidate next trial in joint space, Cartesian space, and command smoothness.
+            Hypergradients are obtained by differentiating the locally active KKT system.
+          </p>
+        </article>
+        <article class="method-card">
+          <span class="method-number">4</span>
+          <h3>Move only after learning</h3>
+          <p>
+            After the computational parameter updates, the constrained ILC problem is re-solved with the adapted parameters.
+            Only that final command is executed on the next physical trial.
+          </p>
+        </article>
+      </div>
+
+      <figure class="media-slot wide-diagram-figure">
+        <div class="media-frame wide-diagram">
+          <a href="../../images/projects/differentiable-ilc/framework.jpg"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="diagram-link"
+             title="Open full-resolution computational graph">
+            <img src="../../images/projects/differentiable-ilc/framework.jpg"
+                 alt="Computational graph of Diff-ILC showing the constrained ILC forward computation and KKT-based backward parameter update"
+                 loading="lazy">
+          </a>
+        </div>
+        <figcaption>
+          Trial-level computational graph. The measured robot trajectory anchors the next-trial prediction;
+          the backward pass updates the ILC design parameters without another robot execution.
+          <span class="figure-action">Click to view full resolution.</span>
+        </figcaption>
+      </figure>
+
+      <div class="callout">
+        <strong>What is adapted?</strong>
+        Diff-ILC learns 19 ILC design parameters: six correction penalties, six first-difference penalties,
+        six second-difference penalties, and one shared trial-to-trial correction bound.
+      </div>
+    </section>
+
+    <!-- EXPERIMENTS -->
+    <section class="project-section" id="experiments">
+      <div class="section-kicker">Experiments</div>
+      <h2>One identified model, several motions</h2>
+      <p>
+        The evaluation uses a 6-DoF DOBOT CR3 with only its joint-position command interface.
+        The same identified differential model is reused across unseen planar and three-dimensional trajectories,
+        and again for a faster execution condition.
+      </p>
+
+      <figure class="media-slot generalization-media">
+        <div class="media-frame">
+          <video autoplay muted loop playsinline preload="metadata"
+                 poster="../../images/projects/differentiable-ilc/generalization-poster.jpg"
+                 aria-label="Generalization of the same identified differential model across four robot trajectories">
+            <source src="../../images/projects/differentiable-ilc/generalization.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+        </div>
+        <figcaption>
+          Circle, infinity, star, and 3D helix tracking using the same identified differential model;
+          no trajectory-specific re-identification is performed.
+        </figcaption>
+      </figure>
+
+      <dl class="setup-grid">
+        <div><dt>Robot</dt><dd>6-DoF DOBOT CR3</dd></div>
+        <div><dt>Interface</dt><dd>Joint-position commands</dd></div>
+        <div><dt>Control rate</dt><dd>100 Hz</dd></div>
+        <div><dt>Primary motions</dt><dd>0.1 Hz · ≈20 s</dd></div>
+        <div><dt>Physical ILC trials</dt><dd>10 per experiment</dd></div>
+        <div><dt>Faster-motion test</dt><dd>0.15 Hz · 1.5× faster</dd></div>
+      </dl>
+
+      <p class="small-context">
+        The differential model is identified once using three nominal executions and six symmetric perturbation directions
+        (15 physical identification trials total), then kept fixed throughout the ILC evaluations.
+      </p>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="project-section" id="results">
+      <div class="section-kicker">Results</div>
+      <h2>Faster improvement in the first few physical trials</h2>
+
+      <p>
+        Across the four primary trajectories, the ten-epoch Diff-ILC configuration reaches a mean joint-vector RMSE
+        of <strong>0.35°</strong> and Cartesian RMSE of <strong>1.06 mm</strong> at Trial 3.
+        The fixed-parameter baseline reaches <strong>1.65°</strong> and <strong>4.50 mm</strong>, respectively.
+      </p>
+
+      <figure class="media-slot">
+        <div class="media-frame">
+          <img src="../../images/projects/differentiable-ilc/convergence.jpg"
+               alt="Joint-vector and Cartesian tracking RMSE over the first five physical trials for circle, infinity, star, and helix trajectories"
+               loading="lazy">
+        </div>
+        <figcaption>
+          Tracking convergence over the first five physical trials. The main advantage of Diff-ILC appears early:
+          it reduces tracking error much faster than the fixed-parameter baseline.
+        </figcaption>
+      </figure>
+
+      <div class="result-callout">
+        <strong>Physical-trial efficiency:</strong>
+        by Trial 3—after only two trial-to-trial command updates—Diff-ILC already achieves lower mean tracking error
+        than the fixed-parameter baseline reaches by Trial 5.
+      </div>
+
+      <div class="table-scroll" role="region" aria-label="Trial 3 Cartesian RMSE comparison" tabindex="0">
+        <table class="results-table">
+          <caption>Trial 3: Cartesian position RMSE</caption>
+          <thead>
+            <tr>
+              <th scope="col">Trajectory</th>
+              <th scope="col">Fixed MB-ILC</th>
+              <th scope="col">Diff-ILC (10 epochs)</th>
+              <th scope="col">Reduction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Circle</th><td>4.05 mm</td><td>0.73 mm</td><td>82.0%</td></tr>
+            <tr><th scope="row">Helix</th><td>3.79 mm</td><td>0.73 mm</td><td>80.7%</td></tr>
+            <tr><th scope="row">Infinity</th><td>4.48 mm</td><td>0.95 mm</td><td>78.8%</td></tr>
+            <tr><th scope="row">Star</th><td>5.68 mm</td><td>1.82 mm</td><td>68.0%</td></tr>
+            <tr><th scope="row">Fast circle (0.15 Hz)</th><td>6.02 mm</td><td>1.45 mm</td><td>75.9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="results-note">
+        Values are means over three repeated experiments. The fast-circle condition is not included in the four-trajectory
+        averages used for the headline metrics.
+      </p>
+
+      <div class="result-story">
+        <h3>A harder path: the star trajectory</h3>
+        <p>
+          The star path introduces sharp changes in direction. At Trial 3, Diff-ILC reduces joint RMSE from
+          <strong>2.06° to 0.52°</strong> and Cartesian RMSE from <strong>5.68 mm to 1.82 mm</strong>
+          relative to fixed-parameter model-based ILC.
+        </p>
+        <figure class="media-slot">
+          <div class="media-frame">
+            <img src="../../images/projects/differentiable-ilc/star_trial3_joint_error.jpg"
+                 alt="Joint-wise tracking-error time histories on the star trajectory at Trial 3 comparing fixed model-based ILC and Diff-ILC"
+                 loading="lazy">
+          </div>
+          <figcaption>
+            Trial-3 joint-wise tracking errors on the star trajectory.
+          </figcaption>
+        </figure>
+
+        <h3>How the learned parameters evolve</h3>
+        <p>
+          On the star trajectory, the correction penalties decrease while temporal-variation and curvature penalties increase.
+          The shared correction bound grows from <strong>1° to 8.29°</strong>, allowing larger corrections while increasingly
+          penalizing nonsmooth command variation.
+        </p>
+        <figure class="media-slot">
+          <div class="media-frame">
+            <img src="../../images/projects/differentiable-ilc/star_parameters.jpg"
+                 alt="Evolution of Diff-ILC correction, temporal-variation, curvature penalties, and the shared correction bound"
+                 loading="lazy">
+          </div>
+          <figcaption>
+            Online evolution of the learned Diff-ILC parameters for the star trajectory.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ROBOT TRIALS -->
+    <section class="project-section" id="tracking-experiments">
+      <div class="section-kicker">Robot trials</div>
+      <h2>Trajectory tracking experiments</h2>
+      <p>
+        The videos below show the physical DOBOT CR3 experiments, including the baseline and Diff-ILC tracking evolution
+        across repeated executions.
+      </p>
+
+      <h3 class="experiment-group-title">Primary trajectories</h3>
+      <p class="experiment-group-intro">
+        Four unseen evaluation paths executed at 0.1 Hz using the same identified differential model.
+      </p>
+
+      <div class="trajectory-grid">
+        <figure class="trajectory-card">
+          <video controls playsinline preload="metadata"
+                 poster="../../images/projects/differentiable-ilc/circle-poster.jpg"
+                 aria-label="Circle trajectory tracking experiment">
+            <source src="../../images/projects/differentiable-ilc/circle.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <h3>Circle</h3>
+            <p>Planar circular reference trajectory · 0.1 Hz.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="trajectory-card">
+          <video controls playsinline preload="metadata"
+                 poster="../../images/projects/differentiable-ilc/infinity-poster.jpg"
+                 aria-label="Infinity trajectory tracking experiment">
+            <source src="../../images/projects/differentiable-ilc/infinity.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <h3>Infinity</h3>
+            <p>Planar infinity-shaped reference trajectory · 0.1 Hz.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="trajectory-card">
+          <video controls playsinline preload="metadata"
+                 poster="../../images/projects/differentiable-ilc/star-poster.jpg"
+                 aria-label="Star trajectory tracking experiment">
+            <source src="../../images/projects/differentiable-ilc/star.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <h3>Star</h3>
+            <p>High-curvature star-shaped reference trajectory · 0.1 Hz.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="trajectory-card">
+          <video controls playsinline preload="metadata"
+                 poster="../../images/projects/differentiable-ilc/helix-poster.jpg"
+                 aria-label="Three-dimensional helix trajectory tracking experiment">
+            <source src="../../images/projects/differentiable-ilc/helix.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <h3>3D helix</h3>
+            <p>Three-dimensional helical reference trajectory · 0.1 Hz.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="transfer-block">
+        <h3>Faster-motion transfer</h3>
+        <p>
+          The circle is then executed at <strong>0.15 Hz (1.5× faster)</strong> using the same identified differential model,
+          without speed-specific re-identification. At Trial 3, Diff-ILC reduces Cartesian RMSE from 6.02 mm to 1.45 mm.
+        </p>
+
+        <figure class="trajectory-card transfer-card">
+          <video controls playsinline preload="metadata"
+                 poster="../../images/projects/differentiable-ilc/fast-poster.jpg"
+                 aria-label="Faster circle trajectory tracking experiment">
+            <source src="../../images/projects/differentiable-ilc/fast.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <h3>Fast circle</h3>
+            <p>Transfer to a higher execution rate with the same fixed differential model.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer class="project-footer">
+      <a href="../../research.html">Research</a>
+      <span aria-hidden="true">·</span>
+      <a href="../../publications.html">Publications</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://www.youtube.com/@CORTxLab" target="_blank" rel="noopener noreferrer">CORTx YouTube</a>
+    </footer>
+  </main>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Differentiable Iterative Learning Control for Black-Box Position-Commanded Manipulators",
+    "alternateName": "Diff-ILC",
+    "url": "https://cortx-lab.github.io/projects/differentiable-ilc/",
+    "image": "https://cortx-lab.github.io/images/projects/differentiable-ilc/graphical_abstract.jpg",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "CORTx Lab",
+      "url": "https://cortx-lab.github.io/"
+    },
+    "author": [
+      {"@type": "Person", "name": "Mohammed Al-Ghaili"},
+      {"@type": "Person", "name": "Yakoop Qasim"},
+      {"@type": "Person", "name": "Hassan Almubarak"}
+    ]
+  }
+  </script>
+</body>
+</html>

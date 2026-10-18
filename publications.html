@@ -18,11 +18,7 @@
 
   <meta name="author" content="Hassan Almubarak">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/squared.png">
     <link rel="canonical" href="https://cortx-lab.github.io/publications.html">
@@ -165,6 +161,10 @@
   </style>
 </head>
 
+<body>
+
+
+
 <!-- NAVIGATION -->
 <div class="header" style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-bottom:0px">
   <a href="index.html" class="logo" style="color:black;font-size:18px; padding-top:30px">
@@ -177,14 +177,25 @@
     <a href="publications.html" style="font-size: 23px; color:#0B3041">Publications</a>
     <a href="join.html" style="font-size: 23px; color:#0B3041">Join</a>
     <br>
-    <div class="header-right" style="padding-top:0px;">
-      <a href="https://github.com/CORTx-Lab"><i class="fa fa-github" style="font-size:28px;color:#275317;"></i></a>
+    <div class="header-right header-social-links" style="padding-top:0px;">
+      <a href="https://github.com/CORTx-Lab"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="CORTx Lab GitHub"
+         title="CORTx Lab GitHub">
+        <i class="fa fa-github" style="font-size:28px;color:#275317;" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.youtube.com/@CORTxLab"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="CORTx Lab YouTube"
+         title="CORTx Lab YouTube">
+        <i class="fa fa-youtube-play" style="font-size:28px;color:#275317;" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 </div>
-
-<body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tbody>
       <tr>
         <td style="padding:20px">
@@ -209,6 +220,33 @@
 
           <!-- 2026 -->
          <div class="year-heading">2026</div>
+
+          <!-- Forthcoming: expected October 29, 2026 -->
+          <div class="pub-item" id="diff-ilc-publication">
+            <div class="pub-title">Differentiable Iterative Learning Control for Black-Box Position-Commanded Manipulators</div>
+            <div class="pub-authors">Mohammed Al-Ghaili, Yakoop Qasim, Hassan Almubarak</div>
+            <div class="pub-venue"><i>Preprint</i>, forthcoming 2026</div>
+            <div class="pub-note">
+            </div>
+            <div class="pub-links">
+              <!-- Replace # with the final arXiv URL once available -->
+              <a href="#" title="Add the final arXiv URL when available">arXiv</a>
+              <a href="projects/differentiable-ilc/">Project Website</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-title">LBA-CBF: Rapidly Adaptive Safety Filters via Parallel Dynamics Inference</div>
+            <div class="pub-authors">Maitham F. AL-Sunni, Timeea-Andreea Radu, Hassan Almubarak, Henry Z. Liao, Michael Görner, Francesco Maurelli, John M. Dolan</div>
+            <div class="pub-venue"><i>arXiv preprint arXiv:2610.08765</i>, 2026</div>
+            <div class="pub-note">
+            </div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2610.08765">arXiv</a>
+              <a href="https://lla-control.github.io/">Project Website</a>
+            </div>
+          </div>
+
          <div class="pub-item">
             <div class="pub-title">Barrier-Riccati Synthesis for Nonlinear Safe Control with Expanded Region of Attraction</div>
             <div class="pub-authors">Hassan Almubarak, Maitham F. AL-Sunni, Justin T. Dubbin, Nader Sadegh, John M. Dolan, Evangelos A. Theodorou</div>
@@ -218,7 +256,7 @@
             </div>
             <div class="pub-links">
               <a href="https://arxiv.org/abs/2504.15453">arXiv</a>
-              <a class="https://doi.org/10.23919/ACC--------">DOI</a>
+              <!-- Add the final DOI here when available. -->
             </div>
           </div>
 
@@ -431,7 +469,5 @@
       </tr>
     </tbody>
   </table>
-
-  <script src="placeholder.js"></script>
 </body>
 </html>

@@ -16,10 +16,7 @@
   <meta name="description" content="CORTx Lab at KFUPM works on safety-critical control, robotics, optimization, adaptive and learning-enabled control, autonomous racing, off-road driving, and AI for autonomy.">
   <meta name="author" content="Hassan Almubarak">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/squared.png">
   <link rel="canonical" href="https://cortx-lab.github.io/">
@@ -86,19 +83,6 @@
     .square-tile video {
       object-fit: contain;
       background: #f7f7f7;
-    }
-
-    .home-media-caption {
-      position: absolute;
-      left: 10px;
-      bottom: 10px;
-      background: rgba(11, 48, 65, 0.82);
-      color: white;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 10px;
-      border-radius: 999px;
-      line-height: 1.2;
     }
 
     .featured-software-section {
@@ -307,8 +291,21 @@
       <a href="publications.html" style="font-size:23px; color:#0B3041">Publications</a>
       <a href="join.html" style="font-size:23px; color:#0B3041">Join</a>
       <br>
-      <div class="header-right" style="padding-top:0;">
-        <a href="https://github.com/CORTx-Lab"><i class="fa fa-github" style="font-size:28px;color:#275317;"></i></a>
+      <div class="header-right header-social-links" style="padding-top:0;">
+        <a href="https://github.com/CORTx-Lab"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="CORTx Lab GitHub"
+           title="CORTx Lab GitHub">
+          <i class="fa fa-github" style="font-size:28px;color:#275317;" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/@CORTxLab"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="CORTx Lab YouTube"
+           title="CORTx Lab YouTube">
+          <i class="fa fa-youtube-play" style="font-size:28px;color:#275317;" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </div>
@@ -327,7 +324,9 @@
             <img src="images/research/dt_mpc_robotarium_x2.gif" alt="Autonomous systems animation" data-keep-image="true">
           </div>
           <div class="home-media-tile top-tile">
-            <img src="images/research/diff-ilc.gif" alt="Research visual" data-keep-image="true">
+            <img src="images/research/diff-ilc.gif"
+                 alt="Differentiable Iterative Learning Control on a robotic manipulator"
+                 data-keep-image="true">
           </div>
           <div class="home-media-tile top-tile">
             <img src="images/research/lla_mpc_carla.gif" alt="Research visual" data-keep-image="true">
@@ -339,7 +338,9 @@
             <img src="images/research/acc_anim.gif" alt="Research visual" data-keep-image="true">
           </div>
           <div class="home-media-tile bottom-tile">
-            <img src="images/research/lba-cbf-f1tenth.gif" alt="Autonomous systems animation" data-keep-image="true">
+            <img src="images/research/lba-cbf-f1tenth.gif"
+                 alt="LBA-CBF adaptive safety filtering on an F1TENTH vehicle"
+                 data-keep-image="true">
           </div>
           <div class="home-media-tile bottom-tile square-tile">
             <img src="images/research/lba-cbf-crazyfly.gif" alt="Research visual" data-keep-image="true">
@@ -489,6 +490,25 @@
       <h2>News</h2>
 
       <ul class="fa-ul news-list">
+
+      <li>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        <span><b>[Oct 2026]</b></span>
+        Our work,
+        <a href="projects/differentiable-ilc/"><b>Differentiable Iterative Learning Control for Black-Box Position-Commanded Manipulators</b></a>,
+        introduces <b>Diff-ILC</b>, a differentiable learning framework for rapid trial-to-trial adaptation on physical robots.
+        <a href="DIFF_ILC_ARXIV_URL" target="_blank" rel="noopener noreferrer">arXiv</a>.
+      </li>
+
+      <li>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        <span><b>[Oct 2026]</b></span>
+        Our work,
+        <a href="https://arxiv.org/abs/2610.08765" target="_blank" rel="noopener noreferrer"><b>LBA-CBF: Rapidly Adaptive Safety Filters via Parallel Dynamics Inference</b></a>,
+        introduces <b>LBA-CBF</b>, a rapidly adaptive safety-filtering framework using parallel dynamics inference to handle changing system dynamics.
+        See the broader <a href="https://lla-control.github.io/" target="_blank" rel="noopener noreferrer">LLA project</a>.
+      </li>
+
         <li>
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
           <span><b>[Aug 2026]</b></span>
@@ -572,7 +592,8 @@
       "alternateName": "KFUPM"
     },
     "sameAs": [
-      "https://github.com/CORTx-Lab"
+      "https://github.com/CORTx-Lab",
+      "https://www.youtube.com/@CORTxLab"
     ]
   }
   </script>
@@ -587,8 +608,5 @@
       }
     }
   </script>
-
-  <script src="placeholder.js"></script>
-
 </body>
 </html>
